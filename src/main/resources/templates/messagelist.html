@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Add</a><br />
+<table>
+    <tr>
+        <th>Content </th>
+        <th>Sentby</th>
+        <th>Date</th>
+    </tr>
+    <tr th:each="message :${messages}">
+        <td th:text="${message.content}"></td> -
+        <td th:text="${message.sentby}"></td>
+        <td th:text="${message.posteddate}"></td>
+    </tr>
+</table>
+</body>
+</html>
